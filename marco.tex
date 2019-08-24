@@ -1,0 +1,152 @@
+%\section{Introducción Teórica del tema a tratar y Marco Teórico}
+\label{sec:2_marcoteorico}
+
+\subsection{Historia del RFID}
+
+\begin{itemize}
+\item \textbf{1860:} James Clerk Maxwell, físico escocés, predijo la existencia de ondas radio y postuló su uso.
+
+\item \textbf{1886:} Un científico alemán, Heinrich Rudolf Hertz probó que rápidas variaciones de corriente 	eléctrica podían ser proyectadas en el espacio en forma de ondas de radio, similar a las ondas de luz, y que ,éstas, eran medibles y repetibles.
+
+\item \textbf{1902:} Guglielmo Marconi, físico italiano, demostró la primera comunicación de larga distancia usando ondas radio, atravesando el Atlántico. Consistió en transmitir SOS en código Morse, en particular la letra S.
+
+\item \textbf{1942 (Durante la II Guerra Mundial):} Los británicos desarrollaron el primer sistema etiquetado de RFID, el objetivo era discriminar rápidamente entre su propia flota de aviones y los escuadrones alemanes. Los aviones británicos incorporaban tags que contestaban a un lector con un código \textit{“I am a friend”}. Basado en el sistema de identificación \textit{IFF (Identity Friend or Foe)}.
+
+\item \textbf{1960:} La necesidad de seguridad en los materiales nucleares condujo al desarrollo de una etiqueta RFID como el EAS \textit{(Electronic Article Surveillance)}.
+
+\item \textbf{1977:} La necesidad de seguridad en los materiales nucleares condujo al desarrollo de una etiqueta RFID como el EAS \textit{(Electronic Article Surveillance)}.
+
+\item \textbf{A partir de 1980:} Se focaliza en la comercialización de la RFID, desde nuevas aplicaciones a mejoras en el comportamiento y el coste de lectores, etiquetas y antenas. El éxito es evidente viendo la situación actual de la RFID.
+
+\item \textbf{2000:} \textit{Auto-ID Center} focaliza todos sus esfuerzos en el desarrollo tecnológico para la 	implantación masiva de la tecnología RFID en la cadena de suministro, proporcionando un sustituto al código de barras. Posteriormente se convierte en EPC global para gestionar y desarrollar estándares.
+
+\end{itemize}
+
+
+\subsection{Identificación por radiofrecuencia}
+En los años recientes, los sistemas de identificación por radiofrecuencia (\textit{RFID} por sus siglas en inglés) se han vuelto muy populares en distintas áreas de la industria tales como logística, industria manufacturera, control de acceso, y transporte. Este tipo de sistemas forma parte de los que se conocen como \textit{sistemas de identificación automática (Auto-ID)} \cite{rfid_handbook}, donde el uso más extendido se encuentra en el código de barras. Los tipos de \textit{Auto-ID} se muestran en la figura \ref{fig:tipos_rfid}.
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{tipos_rfid.png}
+\centering
+\caption{Tipos de Auto-ID}
+\label{fig:tipos_rfid}
+\end{figure}
+
+La tecnología \textit{RFID} brinda información segura y permiten llevar un control eficiente del estado de los productos a muy bajo costo. El RFID nace como una evolución natural dedicada a identificar o realizar un seguimiento de personas, productos o animales. En comparación al código de barras, éste es capaz de almacenar más datos en memoria y permite la intercomunicación simultanea de varios \textit{tags}. Un sistema RFID está compuesto generalmente por un interrogador o lector (\textit{PCD - Proximity Coupling Device}) y uno o varios transponders, que generalmente toma la forma de tarjetas personales y/o tarjetas adhesivas (\textit{PICC - Proximity Integrated Circuit Card}). Cada transponder (\textit{tag}) cumple el rol de portador de información, tales como datos o identificación de un producto. Debido a su reducido tamaño y peso son dispositivos ideales para ser transportados por personas y animales, o para ser adheridos en algún producto.
+
+Los transponders RFID se pueden clasificar en dos tipos debido a la de su alimentación: Activos o Pasivos. Los tags activos requieren energía adicional para alimentar el circuito, y los pasivos no requieren alimentación externa para su funcionamiento. 
+
+Un ejemplo de los tags pasivos puede ser la tarjeta \textit{SUBE (Sistema Único de Boleto Electrónico)}. La SUBE es un sistema implementado en la República Argentina a partir del año 2011 que permite a cada usuario con su respectiva tarjeta inteligente, abonar los viajes en colectivos, subtes, trenes y los peajes adheridas a la Red SUBE. Éstas tarjetas cumplen con la norma ISO 14443-A que se describirán en la sección \ref{sec:iso}.
+
+
+
+\subsection{Clasificación y estandarización de los sistemas RFID}
+
+Existe una gran variedad de organizaciones que han determinado los estándares para la Identificación por Radio Frecuencia (RFID) según intereses, aplicaciones o simplemente por globalización. Entre las más destacadas encontramos la \textit{ISO (International Organization for Standardization)}, \textit{IEC (International Electrotechnical Commission)}, \textit{ASTM (American Society for Testing and Materials)} o \textit{EPCglobal (Asociación entre EAN International y GS1 Uniform Code Council)}.
+
+También existen algunos sectores industriales que han establecido guías, ya sea para una mejor adaptación a sus realidades particulares, o bien porque no existían. Algunos ejemplos de estas industrias los encontramos en la \textit{FSTC (Financial Services Technology Consortium)}, el \textit{ICAR (International Committee for Animal Recording), CompTIA (Computer Technology Industry Association)}, la \textit{IATA (International Air Transport Association)}, \textit{EMV Contactless (Europay, Mastercard y Visa)}, organizaciones gubernamentales, etc.
+
+\subsubsection{Regulación del espectro electromagnético}
+
+Los distintos países han asignado diferentes zonas del espectro radioeléctrico para la RFID,  sin embargo, la mayoría de los países han acordado utilizar para los \textbf{sistemas de baja frecuencia (LF)} las zonas de 125 y 134,2 kHz del espectro, y la frecuencia de 13,56 MHz para los sistemas de \textbf{alta frecuencia (HF)}. Pero los \textbf{sistemas de ultra alta frecuencia (UHF)}, existen solo desde la segunda mitad de la década de los años 90 y los países no han acordado una sola zona del espectro para dicha banda, de manera que es mas complejo satisfacer óptimamente todos los requerimientos de los mercados existentes y/o potenciales.
+
+En la Tabla \ref{table:rango_frec} se observa la diversidad de rangos del espectro UHF utilizados en diferentes países y regiones del mundo, mientras que en las bandas LF y HF se utilizan las mismas frecuencias.
+
+\begin{table}[H]
+\centering
+\caption{Clasificación y rango de frecuencias}
+\label{table:rango_frec}
+\begin{tabular}{c|c|c|c}
+\textbf{País o Región} & \textbf{LF}       & \textbf{HF} & \textbf{UHF}                                                                                \\ \hline
+USA                    & 125 $-$ 134,2 kHz & 13,56 MHz   & 902 $-$ 928 MHz                                                                             \\
+Europa                 & 125 $-$ 134,2 kHz & 13,56 MHz   & 865 $-$ 868 MHz                                                                             \\
+Japón                  & 125 $-$ 134,2 kHz & 13,56 MHz   & 952 $-$ 954 MHz                                                                             \\
+China                  & 125 $-$ 134,2 kHz & 13,56 MHz   & \begin{tabular}[c]{@{}c@{}}B1 = 840,5 $-$ 844,5 MHz\\ B2 = 920,5 $-$ 924,5 MHz\end{tabular} \\
+Argentina              & 125 $-$ 134,2 kHz & 13,56 MHz   & 902 $-$ 928 MHz                                                                            
+\end{tabular}
+\end{table}
+
+\subsubsection{Estándares establecidos}
+
+Las familia de normas \textbf{ISO 18000} se han desarrollado para garantizar la interoperabilidad entre los sistemas RFID. Es el estándar que describe las diferentes tecnologías y/o frecuencias para la gestión a nivel de artículos. Las diferentes partes de este estándar describen la interface de comunicación vía aire de las distintas frecuencias para establecer los distintos comportamientos físicos.
+
+Las distintas partes son:
+\begin{itemize}
+\item \textbf{Parte 1}: Arquitectura de referencia y definición de los parámetros estandarizados.
+\item \textbf{Parte 2}: Parámetros establecidos para la interface de comunicación vía aire aplicados a los sistemas que funcionan a 135 KHz.
+\item \textbf{Parte 3}: Parámetros establecidos para la interface de comunicación vía aire aplicados a los sistemas que funcionan a 13,56 MHz.
+\item \textbf{Parte 4}: Parámetros establecidos para la interface de comunicación vía aire aplicados a los sistemas que funcionan a  2,45 GHz.
+\item \textbf{Parte 5}: Parámetros establecidos para la interface de comunicación vía aire aplicados a los sistemas que funcionan a 5,8 GHz (fue retirada por falta de uso).
+\item \textbf{Parte 6}: Parámetros establecidos para el interface de comunicación vía aire aplicados a los sistemas que funcionan entre 860 MHz y 960 MHz.
+\item \textbf{Parte 7}: Parámetros establecidos para el interface de comunicación activo vía aire aplicados a los sistemas que funcionan a 433 MHz.
+\end{itemize}
+
+\subsubsection{Estándares LF}
+
+\begin{itemize}
+\item \textbf{ISO 14223} - Es el estándar que especifica la estructura del código de radiofrecuencia (RF) para transponders usados en animales. Esta norma es una extensión de los otros estándares \textbf{ISO 11784} e \textbf{ISO 11785}.
+\item \textbf{ISO 11784} - Especifica la estructura del código de identificación
+\item \textbf{ISO 11785} - Especifica la interface de comunicación vía aire aplicados a los sistemas que funcionan a 134,2 KHz, en la cual se definen y aprueban dos sistemas de intercambio de información: \textit{FDX-B (Full duplex)} y \textit{HDX (Half duplex)}.
+\end{itemize}
+
+\subsubsection{Estándares HF} 
+
+\begin{itemize}
+\item \textbf{ISO 14443} - Es el estándar basado en la frecuencia de 13,56 MHz \textit{(HF)} y es conocido como el estándar de tarjetas de proximidad o tarjetas con circuito integrado sin contacto.
+\item \textbf{ISO 15692} - Protocolo de los datos usados en el intercambio de información en los sistemas RFID para la gestión de ítems, operando con el proceso de datos y la presentación en el tag RFID, así como el procesamiento inicial de los datos capturados desde transponder.
+\item \textbf{ISO 15693} - Este estándar está basado también en la frecuencia de 13,56 MHz \textit{(HF)} y es conocido como el estándar para las tarjetas de vecindad \textit{(vicinity cards)}. La diferencia principal es la distancia de lectura/escritura que este estándar regula llegando a alcanzar 1,5 metros de distancia. Una de las claves de esta mayor distancia respecto a las tarjetas de proximidad (ISO 14443) es el campo magnético necesario para su activación, siendo de 0,15 a 5 A/m (1,5 a 7,5 A/m para la ISO 14443).
+\item \textbf{ISO 18092} - Estándar que describe el intercambio de información sin contacto entre sistemas, conocido también como \textit{NFC (Near Field Communication – interface y protocolo NFCIP-1)}.
+\item \textbf{ISO 21481} - Sistemas de intercambio de información y telecomunicaciones entre sistemas, \textit{Near Field Communications interface y protocolo – 2 (NFCIP-2)}.
+\item \textbf{EMV Contactless} - Especificaciones para los sistemas de pago que define la arquitectura y requisitos generales, puntos de partida, especificaciones del kernel y el protocolo de comunicaciones contactless. Se basa en la \textbf{ISO 7816} y la \textbf{ISO 14443}.
+\end{itemize}
+
+\subsubsection{Estándares UHF}
+
+\begin{itemize}
+\item \textbf{ISO 18000-6} - Especifica los requisitos físicos y lógicos para un sistema de retrodispersión pasiva (passive-backscatter). El Lector recibe información de una etiqueta transmitiendo una señal de RF de onda continua (CW) a la etiqueta; la etiqueta responde modulando el coeficiente de reflexión de su antena, con lo cual retrodispersa una señal de información al Lector. 
+\item \textbf{ISO 18000-61 – Type A} - El sistema es \textit{ITF (Interrogator-Talks-First)}, lo que significa que una etiqueta modula su coeficiente de reflexión de la antena con una señal de información solo después de ser dirigido por un Lector. Las etiquetas del tipo A utilizan la codificación \textit{PIE (Pulse-Interval Encoding)} en el enlace directo, y el algoritmo anti-colisión llamado \textit{ALOHA}.
+\item \textbf{ISO 18000-62 – Type B} - El sistema es \textit{ITF} como las del tipo A, pero utiliza Codificación Manchester en el enlace directo, y como algoritmo anti-colisión \textit{binary-tree}.
+\item \textbf{ISO 18000-63 – Type C} - El sistema es \textit{ITF} y utiliza Codificación \textit{PIE} como las de tipo A, pero como algoritmo anti-colisión utiliza \textit{random slotted}.
+\item \textbf{ISO 18000-64 – Type D} - El sistema es \textit{TOTAL (Tag Only Talks After Listening)}, lo que significa que una etiqueta modula su coeficiente de reflexión de antena con una señal de información al ingresar al campo de un Lector, después de escuchar por primera vez la modulación del Lector para determinar si el sistema es o no ITF. La codificación de las etiquetas del tipo D es por posición de pulso \textit{(Pulse Position Encoding)} o \textit{Miller M = 2}.
+\item \textbf{EPC UHF Class1 Gen2} – Las etiquetas \textit{RFID EPC} Clase 1 Gen-2 se utilizan para identificar un artículo en la cadena de suministro a nivel mundial. "Clase 1" se refiere a la funcionalidad de la etiqueta, mientras que "Gen-2" se refiere a los estándares físicos y lógicos de la etiqueta y el sistema abarcador. Estos estándares son mantenidos por \textit{EPCglobal}. 
+\end{itemize}
+
+\subsection{Norma ISO/IEC 14443} \label{sec:iso}
+
+ISO/IEC 14443 es un estándar internacional relacionado con las tarjetas de identificación por radiofrecuencia (RFID), en especial para las tarjetas de proximidad, gestionado conjuntamente por la Organización Internacional de Normalización (ISO) y Comisión Electrónica Internacional (IEC).
+
+Ésta norma consiste en 4 partes:
+\begin{itemize}
+	\item \textbf{Parte 1:} Especifica las características físicas.
+	\item \textbf{Parte 2:} Especifica la potencia RF, los distintos tipos de modulación y la interfaz con el \textit{core} digital.
+	\item \textbf{Parte 3:} Especifica la inicialización y anticolisión entre los chips.
+	\item \textbf{Parte 4:} Especifica el protocolo de transmisión de datos. 
+\end{itemize}
+
+\subsection{Norma ISO/IEC 14443 Parte 1: Características físicas}
+
+Ésta primera parte, al comienzo define los símbolos y abreviaciones que se utilizará a lo largo de la norma. Entre ellas, las más relevantes son:
+
+\begin{itemize}
+	\item \textbf{Proximity Integrated Circuit Card (PICC)}: Es el dispositivo portador de la información, generalmente tiene forma de tarjeta \textit{(tag)}.
+	\item \textbf{Proximity Coupling Device (PCD)}: Es el dispositivo que produce el campo magnético y comunica con el PICC a través de acoplamiento inductivo.
+\end{itemize}
+
+En cuanto a características físicas, se define el tamaño y forma que tiene que tener la antena (86 x 54 x 3) mm, ya que la interfaz de radiofrecuencia y los bancos de prueba, que están definidos en la norma ISO/IEC 10373-6, son para una antena del tamaño de una tarjeta ID-1. El estándar ISO/IEC 7810 define el tamaño de éste tipo de tarjetas.
+
+También se incluye información acerca de la radiación ultravioleta, rayos X, y temperaturas de operación para la PICC.
+
+\subsection{Norma ISO/IEC 14443 Parte 2: Alimentación e interferencia de la señal de RF}
+\label{sec:Norma14443-2}
+\input{Norma_ISO/14443-2/ISO_14443-2__Alimentacion_e_interferencia_de_la_senal_de_radiofrecuencia.tex}
+
+\subsection{Norma ISO/IEC 14443 Parte 3: Inicialización y anticolisión}
+\label{sec:Norma14443-3}
+\input{Norma_ISO/14443-3/ISO_14443-3_Inicializacion_y_anticolision.tex}
+
+\subsection{Norma ISO/IEC 14443 Parte 4: Protocolo de transmisión}
+\label{sec:Norma14443-4}
+\input{Norma_ISO/14443-4/ISO_14443-4_Protocolo_de_transmision.tex}
+
+

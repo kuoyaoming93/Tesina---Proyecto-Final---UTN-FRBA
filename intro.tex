@@ -1,0 +1,17 @@
+\subsection{Tema de investigación}
+Debido al creciente desarrollo de productos de RFID en la última década, se comenzó a investigar ésta tecnología con el objetivo de llevar a cabo un desarrollo nacional que pueda utilizarse en múltiples aplicaciones. Se describe en el presente documento el desarrollo de los módulos de rectificación, regulación de tensión, generador de clock, power-on-reset, modulación de carga, y demodulación de un transceptor RFID para los procesos de fabricación con el que cuenta el \textbf{Departamento de Electrónica de la Facultad Regional Buenos Aires}.
+El rango de frecuencia utilizado en el proyecto es el de 13,553 a 13,567 MHz (según indica la norma ISO/IEC14443), el cual está situado en el medio del rango de longitud de onda corta del espectro electromagnético.
+Se busca presentar los primeros pasos del diseño y desarrollo de un transceptor mediante la tecnología RFID. En el proceso de su desarrollo fue necesario diseñar la antena para la transmisión y recepción de información, el \textit{Front-End} analógico para la comunicación entre el lector \textit{PCD (Proximity Coupling Device)}, la tarjeta \textit{PICC (Proximity Integrated Circuit Card)} y la validación del protocolo de comunicación.
+
+\subsection{Descripción del proyecto}
+
+El grupo de investigación está conformado por 4 estudiantes de la carrera de Ingeniería Electrónica en la Universidad Tecnológica Nacional (Facultad Regional Buenos Aires). La investigación y desarrollo del \textit{Front-End} comenzó en el año 2015 a través de \textit{MOSIS®} en un proceso de fabricación estandar \textit{CMOS} de 500 nm (longitud mínima del canal de transistor).
+
+El proyecto consiste en la puesta en marcha de la parte analógica de un chip transceptor RFID, el desarrollo de la parte digital del protocolo de comunicación bajo la norma ISO/IEC 14443 y por último un banco de prueba para poder verificar el correcto funcionamiento del conjunto analógico y digital con un microcontrolador que a su vez opere bajo la norma antes mencionada.
+
+En la actualidad además del desarrollo en 500nm, también se implementó con la tecnología de 130nm para poder integrar la parte digital del proyecto al chip y además se cuenta con la posibilidad de integrar memorias.
+
+%\subsection{Alcance del proyecto}
+%El proyecto consiste en la fabricación, medición y análisis del funcionamiento del Front-End Analógico para los procesos de fabricación \textit{On Semiconductor (500 nm)} y \textit{Global Foundries (130 nm)}.
+%También consiste en el armado de una placa discreta que cumpla con las mismas funciones (Modulación, demodulación, generador de clock, power on reset).
+%Además se hará un banco de prueba en una \textit{FPGA (Avnet Xilinx SPARTAN 6 LX9 Microboard)} para validar el envío y recepción de los símbolos, cumpliendo la norma \textit{ISO14443-A}. La correcta interpretación de símbolos es muy importante para el funcionamiento del sistema. En lo posible, se contemplará la posibilidad de implementación del protocolo de comunicación. 
